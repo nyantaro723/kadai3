@@ -10,7 +10,7 @@ ng() {
 res=0
 
 ### PRIME FACTORIZATION TEST ###
-out=$(echo "12" | ./prime_factorization
+out=$(echo "12" | ./prime_factorization)
 expected="12 の素因数分解結果: [2, 2, 3]"
 echo "out: ${out}"
 echo "expected: ${expected}"
