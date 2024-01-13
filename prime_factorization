@@ -19,7 +19,7 @@ def prime_factorization(n):
     
     return factors
 
-num = int(input("素因数分解したい数を入力: "))
+num = int(input(" "))
 
 result = prime_factorization(num)
 
