@@ -10,26 +10,26 @@ ng() {
 res=0
 
 ### PRIME FACTORIZATION TEST ###
-out=$(echo "12" | ./prime_factorization)
-expected="12 の素因数分解結果: [2, 2, 3]"
+out=$(echo "12" | python prime_factorization.py)
+expected="[2, 2, 3]"
 echo "out: ${out}"
 echo "expected: ${expected}"
 [ "${out}" == "${expected}" ] || ng $LINENO
 
-out=$(echo "60" | ./prime_factorization)
-expected="60 の素因数分解結果: [2, 2, 3, 5]"
+out=$(echo "60" | python prime_factorization.py)
+expected="[2, 2, 3, 5]"
 echo "out: ${out}"
 echo "expected: ${expected}"
 [ "${out}" == "${expected}" ] || ng $LINENO
 
-out=$(echo "97" | ./prime_factorization)
-expected="97 の素因数分解結果: [97]"
+out=$(echo "97" | python prime_factorization.py)
+expected="[97]"
 echo "out: ${out}"
 echo "expected: ${expected}"
 [ "${out}" == "${expected}" ] || ng $LINENO
 
-out=$(echo "1" | ./prime_factorization)
-expected="1 の素因数分解結果: []"
+out=$(echo "1" | python prime_factorization.py)
+expected="[]"
 echo "out: ${out}"
 echo "expected: ${expected}"
 [ "${out}" == "${expected}" ] || ng $LINENO
