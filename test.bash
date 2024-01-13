@@ -10,25 +10,25 @@ ng() {
 res=0
 
 ### PRIME FACTORIZATION TEST ###
-out=$(echo "12" | python prime_factorization.py)
+out=$(echo "12" | ./prime_factorization) 
 expected="[2, 2, 3]"
 echo "out: ${out}"
 echo "expected: ${expected}"
 [ "${out}" == "${expected}" ] || ng $LINENO
 
-out=$(echo "60" | python prime_factorization.py)
+out=$(echo "60" | ./prime_factorization)
 expected="[2, 2, 3, 5]"
 echo "out: ${out}"
 echo "expected: ${expected}"
 [ "${out}" == "${expected}" ] || ng $LINENO
 
-out=$(echo "97" | python prime_factorization.py)
+out=$(echo "97" | ./prime_factorization)
 expected="[97]"
 echo "out: ${out}"
 echo "expected: ${expected}"
 [ "${out}" == "${expected}" ] || ng $LINENO
 
-out=$(echo "1" | python prime_factorization.py)
+out=$(echo "1" | ./prime_factorization)
 expected="[]"
 echo "out: ${out}"
 echo "expected: ${expected}"
