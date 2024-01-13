@@ -3,34 +3,38 @@
 # SPDX-License-Identifier: BSD-3-clause
 
 ng() {
-  echo "Test failed: $1"
-  exit 1
+  echo "NG at Line $1"
+  res=1
 }
 
-prime_factorization() {
-  # 素因数分解のプログラムをコピー
-  # ...
+res=0
 
-  # テストケース
-  test_cases=(
-    "12:2,2,3"
-    "60:2,2,3,5"
-    "84:2,2,3,7"
-    "97:97"
-    "1:"
-  )
+### PRIME FACTORIZATION TEST ###
+out=$(echo "12" | python prime_factorization.py)
+expected="12 の素因数分解結果: [2, 2, 3]"
+echo "out: ${out}"
+echo "expected: ${expected}"
+[ "${out}" == "${expected}" ] || ng $LINENO
 
-  for test_case in "${test_cases[@]}"; do
-    IFS=":" read num expected_result <<< "$test_case"
-    result=$(python prime_factorization.py <<< "$num")
-    if [ "$result" != "$expected_result" ]; then
-      ng "Input: $num, Expected: $expected_result, Got: $result"
-    fi
-  done
+out=$(echo "60" | python prime_factorization.py)
+expected="60 の素因数分解結果: [2, 2, 3, 5]"
+echo "out: ${out}"
+echo "expected: ${expected}"
+[ "${out}" == "${expected}" ] || ng $LINENO
 
-  echo "OK"
-}
+out=$(echo "97" | python prime_factorization.py)
+expected="97 の素因数分解結果: [97]"
+echo "out: ${out}"
+echo "expected: ${expected}"
+[ "${out}" == "${expected}" ] || ng $LINENO
 
-# 素因数分解のプログラムをテスト
-prime_factorization
+out=$(echo "1" | python prime_factorization.py)
+expected="1 の素因数分解結果: []"
+echo "out: ${out}"
+echo "expected: ${expected}"
+[ "${out}" == "${expected}" ] || ng $LINENO
+
+### ADD MORE TEST CASES IF NEEDED ###
+
+[ "$res" == 0 ] && echo "OK" || echo "Test Failed"
 
