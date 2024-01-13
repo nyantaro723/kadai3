@@ -10,19 +10,32 @@
 
 ## ダウンロード
 
-```bash
-$ git clone https://github.com/nyantaro723/kadai3.git
 ```
-
-## 実行権限の付与
-
-```bash
-$ cd kadai3
-$ chmod +x prime_factorization
+$ git clone https://github.com/nyantaro723/kadai3.git
+$ cd kadai3/
 ```
 
 ## 使い方
 
+```
+$ echo "2以上の自然数" | ./prime_factorization
+```
+
+と入力すると、指定した自然数を素因数分解した値が出力されます。
+
+
+* 実行例
+```
+$ echo 12 | ./prime_factorization
+```
+
+と入力し、実行すると、
+
+```
+12 の素因数分解結果: [2, 2, 3]
+```
+
+と出力されます。
 
 ## 必要なソフトウェア
 
