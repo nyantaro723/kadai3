@@ -36,5 +36,5 @@ echo "expected: ${expected}"
 
 ### ADD MORE TEST CASES IF NEEDED ###
 
-[ "$res" == 0 ] && echo "OK" || echo "Test Failed"
+[ "$res" == 1 ] && echo "OK" || echo "Test Failed"
 
