@@ -1,5 +1,5 @@
 #!/bin/bash
-# SPDX-FileCopyrightText: 2023 Ryusei Matsuki
+# SPDX-FileCopyrightText: 2024 Ryusei Matsuki
 # SPDX-License-Identifier: BSD-3-clause
 
 ng() {

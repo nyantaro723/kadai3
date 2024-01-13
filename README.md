@@ -17,7 +17,7 @@ $ git clone https://github.com/nyantaro723/kadai3.git
 ## 実行権限の付与
 
 ```bash
-$ cd prime_factorization
+$ cd kadai3
 $ chmod +x prime_factorization
 ```
 
