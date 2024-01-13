@@ -1,8 +1,6 @@
-# kadai3
+# prime_factorizationコマンド
 
-## prime_factorizationコマンド
-
-![test](https://github.com/nyantaro723/kadai3/actions/workflows/test.yml/badge.svg)
+![test](https://github.com/nyantaro723/prime_factorization/actions/workflows/test.yml/badge.svg)
 
 このコマンドは、素因数分解の計算を行うためのものです。
 
@@ -11,8 +9,8 @@
 ## ダウンロード
 
 ```
-$ git clone https://github.com/nyantaro723/kadai3.git
-$ cd kadai3/
+$ git clone https://github.com/nyantaro723/prime_factorization.git
+$ cd prime_factorization/
 ```
 
 ## 使い方
